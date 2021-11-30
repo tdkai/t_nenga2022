@@ -1,64 +1,57 @@
-<!DOCTYPE html>
-</html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+<script src='http://cdn.jsdelovr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
 
-    <script src='http://cdn.jsdelovr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js'></script>
-
-    <style>
-        .arjs-loader {
-            height: 100%;
-            width: 100;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rga(0, 0, 0, 0.8);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+<style>
+    .arjs-loader {
+        height: 100%;
+        width: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rga(0, 0, 0, 0.8);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
-        }
+    }
 
-        .arjs-loder div{
-            text-align: center;
-            font-size: 1.25em;
-            color: white;
-        }
-    </style>
+    .arjs-loder div{
+        text-align: center;
+        font-size: 1.25em;
+        color: white;
+    }
+</style>
 
-    <!-- rawgithack development URL -->
-    <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+<!-- rawgithack development URL -->
+<script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
 
-    <body style='margin:0px; overflow:hidden;'>
-        <!-- minimal loader shwn until image descriptors are loaded -->
-        <div class="arjs-loder">
-            <div>Loading, please wait...</div>
-        </div>
-            <a-scene
-                vr-mode-ui='enabled: false;'
-                renderer="logarithmicDepthBuffer: true;"
-                embedded arjs='trackingMethod: best; sourceType; webcam; debugUIEnabled: false;'>
+<body style='margin:0px; overflow:hidden;'>
+    <!-- minimal loader shwn until image descriptors are loaded -->
+    <div class="arjs-loder">
+        <div>Loading, please wait...</div>
+    </div>
+        <a-scene
+            vr-mode-ui='enabled: false;'
+            renderer="logarithmicDepthBuffer: true;"
+            embedded arjs='trackingMethod: best; sourceType; webcam; debugUIEnabled: false;'>
             
-                <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
-                <a-nft
-                    type='nft'
-                    url='https://arjs-cors-proxy.herokuapp.com/http://raw.githack.com/tdkai/t_nenga2022/tree/main/assets/images/hagaki001'
-                    smooth='true'
-                    smoothCount='10'
-                    smoothTolerance='0.01'
-                    smoothThreshold='5'    
-                >
-                    <a-entity
-                        gltf-model='https://arjs-cors-proxy.herokuap.com/https://raw.githack.com/tdkai/t_nenga2022/tree/main/assets/model/tangent.gltf'
-                        scale="100 100 100"
-                        position="0 0 0"
+            <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
+            <a-nft
+                type='nft'
+                url='https://arjs-cors-proxy.herokuapp.com/http://raw.githack.com/tdkai/t_nenga2022/tree/main/assets/images/hagaki001'
+                smooth='true'
+                smoothCount='10'
+                smoothTolerance='0.01'
+                smoothThreshold='5'    
+            >
+                <a-entity
+                    gltf-model='https://arjs-cors-proxy.herokuap.com/https://raw.githack.com/tdkai/t_nenga2022/tree/main/assets/model/tangent.gltf'
+                    scale="100 100 100"
+                    position="0 0 0"
                     >
-                    </a-entity>
-                </a-nft>
-                <a-entity camera></a-entity>
-            </a-scene>
-        </body>
+                </a-entity>
+            </a-nft>
+            <a-entity camera></a-entity>
+        </a-scene>
+</body>
 
